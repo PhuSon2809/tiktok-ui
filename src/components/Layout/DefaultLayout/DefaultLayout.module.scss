@@ -1,12 +1,10 @@
-@import '../../GlobalStyles/GlobalStyles.scss';
-
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   .container {
-    width: $default-layout-width;
+    width: var(--default-layout-width);
     display: flex;
 
     .content {
