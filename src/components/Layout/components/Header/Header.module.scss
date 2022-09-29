@@ -1,6 +1,7 @@
 .wrapper {
   --search-border-radius: 92px;
   --search-height: 46px;
+  --search-width: 361px;
   --search-top-spacer: 9px;
   --search-button-width: 52px;
 
@@ -17,8 +18,18 @@
     justify-content: space-between;
     align-items: center;
 
+    .search-result {
+      width: var(--search-width);
+
+      .search-title {
+        font-size: 1.4rem;
+        font-weight: 600;
+        padding: 5px 12px;
+        color: rgb(22, 24, 35, 0.5);
+      }
+    }
     .search {
-      width: 361px;
+      width: var(--search-width);
       height: var(--search-height);
       padding-left: 16px;
       background-color: rgba(22, 24, 35, 0.06);
@@ -35,7 +46,7 @@
         background-color: transparent;
         caret-color: var(--primary); //Màu của dấu nháy inputư
 
-        &:not(:placeholder-shown) ~ .search-btn{
+        &:not(:placeholder-shown) ~ .search-btn {
           color: rgba(22, 24, 35, 0.75);
         }
       }
@@ -76,7 +87,7 @@
           cursor: pointer;
         }
 
-        &:active{
+        &:active {
           background-color: rgba(22, 24, 35, 0.06);
         }
       }
