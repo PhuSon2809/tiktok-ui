@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCircleXmark,
   faMagnifyingGlass,
+  faSignIn,
   faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
@@ -12,6 +13,7 @@ import { Wrapper as PoperWrapper } from '~/components/Poper';
 import styles from './Header.module.scss';
 import imgages from '~/assets/images';
 import AccountItem from '~/components/AccountItem/AccountItem';
+import Button from '~/components/Button/Button';
 
 const cx = classNames.bind(styles); //giúp viết đc dấu gạch ngang khi đặt tên className
 
@@ -60,7 +62,10 @@ function Header() {
           </div>
         </Tippy>
 
-        <div className={cx('action')}></div>
+        <div className={cx('action')}>
+          <Button text>Upload</Button>
+          <Button primary>Log in</Button>
+        </div>
       </div>
     </header>
   );
