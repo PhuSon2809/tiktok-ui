@@ -10,14 +10,14 @@ function Button({
   href,
   primary = false,
   outline = false,
+  text = false,
+  rounded = false,
+  disabled = false,
   small = false,
   large = false,
-  text = false,
-  disabled = false,
-  round = false,
   children,
   className,
-  feftIcon,
+  leftIcon,
   rightIcon,
   onClick,
   ...passProps
@@ -28,12 +28,8 @@ function Button({
     ...passProps,
   };
 
-  //Remover events listeners when btn is disabled
+  // Remove event listener when btn is disabled
   if (disabled) {
-    //Cách 1
-    // delete props.onClick;
-
-    //Cách 2
     Object.keys(props).forEach((key) => {
       if (key.startsWith('on') && typeof props[key] === 'function') {
         delete props[key];
@@ -53,16 +49,16 @@ function Button({
     [className]: className,
     primary,
     outline,
-    small,
-    large,
     text,
     disabled,
-    round,
+    rounded,
+    small,
+    large,
   });
 
   return (
     <Comp className={classes} {...props}>
-      {feftIcon && <span className={cx('icon')}>{feftIcon}</span>}
+      {leftIcon && <span className={cx('icon')}>{leftIcon}</span>}
       <span className={cx('title')}>{children}</span>
       {rightIcon && <span className={cx('icon')}>{rightIcon}</span>}
     </Comp>
