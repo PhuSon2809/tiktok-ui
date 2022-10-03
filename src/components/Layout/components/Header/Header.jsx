@@ -2,9 +2,12 @@ import React, { useEffect, useState } from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
+  faCircleQuestion,
   faCircleXmark,
+  faEarthAsia,
+  faEllipsisVertical,
+  faKeyboard,
   faMagnifyingGlass,
-  faSignIn,
   faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
@@ -14,8 +17,25 @@ import styles from './Header.module.scss';
 import imgages from '~/assets/images';
 import AccountItem from '~/components/AccountItem/AccountItem';
 import Button from '~/components/Button/Button';
+import Menu from '~/components/Poper/Menu/Menu';
 
 const cx = classNames.bind(styles); //giúp viết đc dấu gạch ngang khi đặt tên className
+
+const MENU_ITEM = [
+  {
+    icon: <FontAwesomeIcon icon={faEarthAsia} />,
+    title: 'English',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+    title: 'Feedback and help',
+    to: '/feedback',
+  },
+  {
+    icon: <FontAwesomeIcon icon={faKeyboard} />,
+    title: 'Keyboard shortcuts',
+  },
+];
 
 function Header() {
   const [searchResult, setSearchResult] = useState([]);
@@ -65,6 +85,12 @@ function Header() {
         <div className={cx('action')}>
           <Button text>Upload</Button>
           <Button primary>Log in</Button>
+
+          <Menu menu={MENU_ITEM}>
+            <button className={cx('more-btn')}>
+              <FontAwesomeIcon icon={faEllipsisVertical} />
+            </button>
+          </Menu>
         </div>
       </div>
     </header>
