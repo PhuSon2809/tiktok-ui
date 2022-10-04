@@ -200,7 +200,7 @@ export const SearchIcon = ({ classes, width = '24px', height = '24px' }) => (
 
 export const PlusIcon = ({ classes, width = '20px', height = '20px' }) => (
   <svg
-    class={classes}
+    className={classes}
     width={width}
     height={height}
     viewBox="0 0 16 16"

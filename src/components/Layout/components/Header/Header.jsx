@@ -6,7 +6,7 @@ import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
 import styles from './Header.module.scss';
-import imgages from '~/assets/images';
+import images from '~/assets/images';
 import Button from '~/components/Button/Button';
 import Menu from '~/components/Poper/Menu/Menu';
 import {
@@ -21,8 +21,8 @@ import {
   SettingIcon,
   UserIcon,
 } from '~/components/Icons/Icon';
-import Image from '~/components/Image/Image';
 import Search from '../Search/Search';
+import Image from '~/components/Image/Image';
 
 const cx = classNames.bind(styles); //giúp viết đc dấu gạch ngang khi đặt tên className
 
@@ -97,7 +97,7 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={imgages.logo} alt="" />
+        <img src={images.logo} alt="" />
 
         {/* Search */}
         <Search />
