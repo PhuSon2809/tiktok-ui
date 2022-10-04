@@ -33,7 +33,7 @@
   text-align: center;
 }
 
-.round {
+.rounded {
   border-radius: 999px;
   color: rgba(22, 24, 35, 0.75);
   box-shadow: 0 2px 8px rgb(0 0 0 / 6%);
@@ -63,6 +63,15 @@
   &:hover {
     border-color: currentColor;
     background: rgba(254, 44, 85, 0.06);
+  }
+}
+
+.outlineDark {
+  border: 1px solid rgba(22, 24, 35, 0.12);
+  border-radius: 0;
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
   }
 }
 

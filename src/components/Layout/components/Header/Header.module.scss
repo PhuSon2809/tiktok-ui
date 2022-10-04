@@ -96,6 +96,30 @@
     }
 
     .action {
+      display: flex;
+      align-items: center;
+
+      .upload-btn{
+        margin-right: 12px;
+      }
+
+      .action-btn {
+        color: rgba(22, 24, 35);
+        font-size: 2.4rem;
+        background: transparent;
+        padding: 4px 12px;
+        cursor: pointer;
+      }
+
+      .user-avatar {
+        width: 32px;
+        height: 32px;
+        object-fit: cover;
+        border-radius: 50%;
+        margin-left: 12px;
+        cursor: pointer;
+      }
+
       .more-btn {
         font-size: 2rem;
         margin-left: 28px;
