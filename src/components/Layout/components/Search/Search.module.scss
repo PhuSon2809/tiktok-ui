@@ -26,7 +26,8 @@
     font-size: 1.6rem;
     background-color: transparent;
     caret-color: var(--primary); //Màu của dấu nháy inputư
-
+    font-family: var(--font-family);
+    
     &:not(:placeholder-shown) ~ .search-btn {
       color: rgba(22, 24, 35, 0.75);
     }

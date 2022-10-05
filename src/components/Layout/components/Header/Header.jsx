@@ -2,6 +2,7 @@ import React from 'react';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
@@ -23,6 +24,7 @@ import {
 } from '~/components/Icons/Icon';
 import Search from '../Search/Search';
 import Image from '~/components/Image/Image';
+import routesConfig from '~/config/routes';
 
 const cx = classNames.bind(styles); //giúp viết đc dấu gạch ngang khi đặt tên className
 
@@ -97,7 +99,9 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <img src={images.logo} alt="" />
+        <Link to={routesConfig.home} className={cx('logo-link')}>
+          <img src={images.logo} alt="" />
+        </Link>
 
         {/* Search */}
         <Search />
@@ -117,11 +121,6 @@ function Header() {
 
           {currentUser ? (
             <>
-              {/* <Tippy content="Upload video">
-                <button className={cx('action-btn')}>
-                  <FontAwesomeIcon icon={faCloudUpload} />
-                </button>
-              </Tippy> */}
               <Tippy content="Message">
                 <button className={cx('action-btn')}>
                   <MessageIcon />
@@ -130,6 +129,7 @@ function Header() {
               <Tippy content="Inbox">
                 <button className={cx('action-btn')}>
                   <InboxIcon />
+                  <span className={cx('badge')}>12</span>
                 </button>
               </Tippy>
             </>
