@@ -8,8 +8,8 @@ import 'tippy.js/dist/tippy.css';
 
 import styles from './Header.module.scss';
 import images from '~/assets/images';
-import Button from '~/components/Button/Button';
-import Menu from '~/components/Poper/Menu/Menu';
+import Button from '~/components/Button';
+import Menu from '~/components/Poper/Menu';
 import {
   CoinIcon,
   FeedbackIcon,
@@ -22,8 +22,8 @@ import {
   SettingIcon,
   UserIcon,
 } from '~/components/Icons/Icon';
-import Search from '../Search/Search';
-import Image from '~/components/Image/Image';
+import Search from '../Search';
+import Image from '~/components/Image';
 import config from '~/config';
 
 const cx = classNames.bind(styles); //giúp viết đc dấu gạch ngang khi đặt tên className

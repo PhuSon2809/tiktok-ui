@@ -4,8 +4,8 @@ import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import AccountItem from '~/components/AccountItem/AccountItem';
-import { SearchIcon } from '~/components/Icons/Icon';
+import AccountItem from '~/components/AccountItem';
+import { SearchIcon } from '~/components/Icons';
 import { Wrapper as PoperWrapper } from '~/components/Poper';
 import styles from './Search.module.scss';
 import { useDebounce } from '~/hook';
