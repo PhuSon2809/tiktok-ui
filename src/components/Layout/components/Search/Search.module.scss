@@ -1,4 +1,10 @@
 .search-result {
+  --search-border-radius: 92px;
+  --search-height: 46px;
+  --search-width: 361px;
+  --search-top-spacer: 9px;
+  --search-button-width: 52px;
+  
   width: var(--search-width);
 
   .search-title {
@@ -27,7 +33,7 @@
     background-color: transparent;
     caret-color: var(--primary); //Màu của dấu nháy inputư
     font-family: var(--font-family);
-    
+
     &:not(:placeholder-shown) ~ .search-btn {
       color: rgba(22, 24, 35, 0.75);
     }
