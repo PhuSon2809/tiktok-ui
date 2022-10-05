@@ -20,8 +20,6 @@ const Image = forwardRef(
       setFallback(customFallback);
     };
 
-    console.log(fallback);
-
     return (
       <img
         className={classNames(styles.wrapper, className)}
