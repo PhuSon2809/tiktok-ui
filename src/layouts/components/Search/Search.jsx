@@ -9,7 +9,7 @@ import { SearchIcon } from '~/components/Icons/Icon';
 import { Wrapper as PoperWrapper } from '~/components/Poper';
 import styles from './Search.module.scss';
 import { useDebounce } from '~/hook';
-import { search } from '~/apiServices/searchServices';
+import { search } from '~/services/searchService';
 
 const cx = classNames.bind(styles);
 

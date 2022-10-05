@@ -1,7 +1,7 @@
 export const MessageIcon = ({
   classes,
-  width = '3.2rem',
-  height = '3.2rem',
+  width = '26px',
+  height = '26px',
 }) => (
   <svg
     className={classes}

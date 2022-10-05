@@ -24,7 +24,7 @@ import {
 } from '~/components/Icons/Icon';
 import Search from '../Search/Search';
 import Image from '~/components/Image/Image';
-import routesConfig from '~/config/routes';
+import config from '~/config';
 
 const cx = classNames.bind(styles); //giúp viết đc dấu gạch ngang khi đặt tên className
 
@@ -99,7 +99,7 @@ function Header() {
   return (
     <header className={cx('wrapper')}>
       <div className={cx('inner')}>
-        <Link to={routesConfig.home} className={cx('logo-link')}>
+        <Link to={config.routes.home} className={cx('logo-link')}>
           <img src={images.logo} alt="" />
         </Link>
 
