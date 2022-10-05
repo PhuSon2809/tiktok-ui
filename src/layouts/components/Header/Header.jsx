@@ -107,7 +107,7 @@ function Header() {
         <Search />
 
         <div className={cx('action')}>
-          {currentUser ? (
+          {!currentUser ? (
             <Button
               className={cx('upload-btn')}
               outlineDark
@@ -119,7 +119,7 @@ function Header() {
             <Button text>Upload</Button>
           )}
 
-          {currentUser ? (
+          {!currentUser ? (
             <>
               <Tippy content="Message">
                 <button className={cx('action-btn')}>
