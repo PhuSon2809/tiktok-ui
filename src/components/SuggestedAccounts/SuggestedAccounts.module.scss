@@ -3,9 +3,10 @@
   padding: 16px 0;
 
   .label {
+    color: rgba(22, 24, 35, 0.75);
     font-size: 1.4rem;
-    padding: 0 8px 8px 8px;
     font-weight: 600;
+    padding: 0 8px 8px 8px;
   }
 
   .more-btn {
@@ -21,6 +22,13 @@
   display: flex;
   align-items: center;
   padding: 8px;
+  border-radius: 4px;
+  transition: background-color ease-in-out 200ms;
+  cursor: pointer;
+  
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.03);
+  }
 
   .avatar {
     width: 32px;
@@ -44,7 +52,7 @@
         margin-top: -2px;
 
         font-size: 1.4rem;
-        color: rgb(32, 213, 236);
+        color: var(--icon-check-color);
       }
     }
 
