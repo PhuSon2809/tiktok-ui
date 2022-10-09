@@ -34,7 +34,7 @@ const Image = forwardRef(
 );
 
 Image.propTypes = {
-  src: PropTypes.string,
+  src: PropTypes.string.isRequired,
   alt: PropTypes.string,
   className: PropTypes.string,
   fallback: PropTypes.string,
