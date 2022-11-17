@@ -64,7 +64,7 @@ function Menu({
     <Tippy
       interactive
       delay={[0, 700]}
-      offset={[12, 8]}
+      offset={[100, 100]}
       hideOnClick={hideOnClick}
       placement="bottom-end"
       render={renderResult}
